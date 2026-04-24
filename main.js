@@ -229,7 +229,7 @@ function createParticle(seedIndex) {
     vx: (Math.random() - 0.5) * (0.22 + seedIndex * 0.002),
     vy: (Math.random() - 0.5) * (0.22 + seedIndex * 0.002),
     radius: 1 + Math.random() * 1.9,
-    hue: 175 + Math.random() * 90,
+    hue: Math.random() * 12,
   };
 }
 
@@ -284,7 +284,7 @@ function draw() {
   }
 
   context.clearRect(0, 0, window.innerWidth, window.innerHeight);
-  context.fillStyle = "rgba(4, 7, 13, 0.16)";
+  context.fillStyle = "rgba(0, 0, 0, 0.16)";
   context.fillRect(0, 0, window.innerWidth, window.innerHeight);
 
   for (const particle of particles) {
@@ -314,7 +314,7 @@ function draw() {
       if (distance < 130) {
         const alpha = (1 - distance / 130) * 0.26;
         context.beginPath();
-        context.strokeStyle = `rgba(111, 248, 255, ${alpha})`;
+        context.strokeStyle = `rgba(255, 62, 62, ${alpha})`;
         context.lineWidth = 1;
         context.moveTo(a.x, a.y);
         context.lineTo(b.x, b.y);
