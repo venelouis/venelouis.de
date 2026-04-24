@@ -1,54 +1,60 @@
-# Venelouis
+# ✦ Venelouis
 
-Site pessoal de Venelouis, com visual ultra-high-tech, foco em educação, tecnologia e projetos autorais.
+<p align="center">
+  <img src="assets/vene.png" width="120" style="border-radius: 50%; border: 2px solid #6ff8ff;" alt="Venelouis">
+</p>
 
-## Sobre
+<p align="center">
+  <strong>Tech Educator | Builder | Google Arcade Facilitator</strong>
+</p>
 
-Este repositório contém uma landing page bilíngue em português e inglês, com animações de fundo, hero com foto circular, seção de projetos em destaque e atalhos para redes sociais e contato direto.
+<p align="center">
+  <img src="https://img.shields.io/badge/Status-Live-success?style=for-the-badge&logo=github" alt="Status">
+  <img src="https://img.shields.io/badge/Tech-HTML%2FJS%2FCSS-blue?style=for-the-badge&logo=javascript" alt="Tech">
+  <img src="https://img.shields.io/badge/Language-Bilingual-orange?style=for-the-badge" alt="Language">
+</p>
 
-## Destaques
+---
 
-- Layout responsivo para desktop e mobile.
-- Alternância de idioma entre PT e EN.
-- Acessibilidade com skip link, foco visível e suporte a redução de movimento.
-- Visual neon com partículas, glow e efeitos cinematográficos.
-- Links diretos para os projetos `creio.eu`, `biblia.creio.eu` e `Clube Amplexo Educação`.
-- Contato direto por WhatsApp e perfis sociais.
+## ✦ Visão Geral
 
-## Projetos em destaque
+Este é o site pessoal de **Venelouis**, uma landing page de alto desempenho desenvolvida com uma estética *ultra-high-tech*. O foco central é a interseção entre educação, tecnologia e projetos autorais que transformam a experiência de aprendizado.
 
-- `creio.eu` - plataforma gamificada para estudo da Bíblia, ciência e tecnologia.
-- `Clube Amplexo Educação` - o clube brasileiro com maior numero de premiados nacional e internacionalmente.
-- `biblia.creio.eu` - estudo bíblico interlinear nos principais idiomas antigos.
+## ✦ Destaques do Projeto
 
-## Redes
+- 🚀 **Visual Cinematic**: Efeitos de partículas, brilhos neon e glassmorphism avançado.
+- 🌍 **Internacionalização**: Sistema bilingue completo (Português/Inglês).
+- 📱 **Ultra Responsivo**: Experiência fluida em qualquer dispositivo (Desktop, Tablet, Mobile).
+- ♿ **Acessibilidade**: Foco em padrões WCAG, suporte a redução de movimento e navegação por teclado.
+- ⚡ **Performance**: Carregamento instantâneo sem frameworks pesados.
 
-- Instagram: https://instagram.com/venelouis
-- LinkedIn: https://www.linkedin.com/in/venelouis
-- YouTube: https://youtube.com/@venelouis
-- GitHub: https://github.com/venelouis
-- X: https://x.com/venelouis
-- WhatsApp: https://wa.me/5585986794831
+## ✦ Ecossistema de Projetos
 
-## Estrutura
+O site serve como hub para as principais iniciativas de Venelouis:
 
-- `index.html` - estrutura principal da página.
-- `styles.css` - estilos, responsividade e animações.
-- `main.js` - partículas, alternância de idioma e interações.
-- `assets/` - imagens e arte visual do site.
+- [**creio.eu**](https://creio.eu) - Plataforma gamificada que une Bíblia, ciência e tecnologia.
+- [**Clube Amplexo Educação**](https://amplexoedu.com) - Centro de excelência educacional com reconhecimento internacional.
+- [**biblia.creio.eu**](https://biblia.creio.eu) - Ferramenta avançada de estudo bíblico interlinear.
 
-## Como abrir
+## ✦ Conecte-se
 
-Abra `index.html` diretamente no navegador ou sirva a pasta com qualquer servidor estático simples.
+<p align="left">
+  <a href="https://instagram.com/venelouis"><img src="https://img.shields.io/badge/Instagram-%23E4405F.svg?style=for-the-badge&logo=Instagram&logoColor=white" alt="Instagram"></a>
+  <a href="https://www.linkedin.com/in/venelouis"><img src="https://img.shields.io/badge/LinkedIn-%230077B5.svg?style=for-the-badge&logo=LinkedIn&logoColor=white" alt="LinkedIn"></a>
+  <a href="https://youtube.com/@venelouis"><img src="https://img.shields.io/badge/YouTube-%23FF0000.svg?style=for-the-badge&logo=YouTube&logoColor=white" alt="YouTube"></a>
+  <a href="https://github.com/venelouis"><img src="https://img.shields.io/badge/GitHub-%23121011.svg?style=for-the-badge&logo=GitHub&logoColor=white" alt="GitHub"></a>
+  <a href="https://wa.me/5585986794831"><img src="https://img.shields.io/badge/WhatsApp-25D366?style=for-the-badge&logo=whatsapp&logoColor=white" alt="WhatsApp"></a>
+</p>
 
-Exemplo com Python:
+---
 
-```bash
-python -m http.server 8000
-```
+## ✦ Desenvolvimento Local
 
-Depois acesse `http://localhost:8000`.
+1. Clone o repositório: `git clone https://github.com/venelouis/venelouis.de.git`
+2. Abra o arquivo `index.html` no seu navegador ou utilize um servidor estático:
+   ```bash
+   npx serve .
+   ```
 
-## Observação
-
-A foto do hero está em `assets/vene.png`.
+---
+*Desenvolvido com foco em excelência educacional e inovação tecnológica.*

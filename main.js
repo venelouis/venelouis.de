@@ -59,13 +59,6 @@ const translations = {
     "project.oneTag2": "Educação bíblica",
     "project.oneTag3": "Ciência",
     "project.oneCta": "Visitar creio.eu",
-    "project.threeTitle": "Clube brasileiro com maior número de premiados nacional e internacionalmente.",
-    "project.threeBody":
-      "O clube brasileiro com maior numero de premiados nacional e internacionalmente.",
-    "project.threeTag1": "Educação",
-    "project.threeTag2": "Reconhecimento",
-    "project.threeTag3": "Impacto",
-    "project.threeCta": "Visitar amplexoedu.com",
     "project.twoTitle": "Estudo bíblico interlinear nos principais idiomas antigos.",
     "project.twoBody":
       "Uma plataforma para explorar hebraico, aramaico, grego, latim, ge'ez, síriaco e armênio com foco em contexto, estrutura e comparação textual.",
@@ -73,12 +66,12 @@ const translations = {
     "project.twoTag2": "Idiomas antigos",
     "project.twoTag3": "Pesquisa",
     "project.twoCta": "Visitar biblia.creio.eu",
-    "project.threeTitle": "Clube brasileiro com maior número de premiados nacional e internacionalmente.",
+    "project.threeTitle": "Clube Amplexo: Excelência em Competições Científicas.",
     "project.threeBody":
-      "O clube brasileiro com maior numero de premiados nacional e internacionalmente.",
+      "Referência nacional em olimpíadas de conhecimento, preparando talentos para os maiores desafios intelectuais do mundo.",
     "project.threeTag1": "Educação",
-    "project.threeTag2": "Reconhecimento",
-    "project.threeTag3": "Impacto",
+    "project.threeTag2": "Olimpíadas",
+    "project.threeTag3": "Premiados",
     "project.threeCta": "Visitar amplexoedu.com",
     "timeline.label": "Linha de atuação",
     "timeline.heading": "Uma narrativa que une ensino, inovação e impacto.",
@@ -96,6 +89,9 @@ const translations = {
     "contact.body":
       "Se você quiser colaboração, palestras, oficinas, consultoria pedagógica ou parceria em projetos de tecnologia e educação, me encontre nas redes abaixo.",
     "contact.whatsapp": "WhatsApp direto",
+    "footer.tagline": "Tecnologia, educação e propósito.",
+    "footer.rights": "Todos os direitos reservados.",
+    "footer.builtWith": "Desenvolvido com paixão e precisão.",
     "lang.button": "EN",
   },
   en: {
@@ -145,13 +141,6 @@ const translations = {
     "project.oneTag2": "Bible education",
     "project.oneTag3": "Science",
     "project.oneCta": "Visit creio.eu",
-    "project.threeTitle": "Brazilian school club with the highest number of awardees nationally and internationally.",
-    "project.threeBody":
-      "The Brazilian club with the highest number of awardees nationally and internationally.",
-    "project.threeTag1": "Education",
-    "project.threeTag2": "Recognition",
-    "project.threeTag3": "Impact",
-    "project.threeCta": "Visit amplexoedu.com",
     "project.twoTitle": "Interlinear Bible study in the major ancient languages.",
     "project.twoBody":
       "A platform to explore Hebrew, Aramaic, Greek, Latin, Ge'ez, Syriac, and Armenian with a focus on context, structure, and textual comparison.",
@@ -159,12 +148,12 @@ const translations = {
     "project.twoTag2": "Ancient languages",
     "project.twoTag3": "Research",
     "project.twoCta": "Visit biblia.creio.eu",
-    "project.threeTitle": "Brazilian school club with the highest number of awardees nationally and internationally.",
+    "project.threeTitle": "Clube Amplexo: Excellence in Scientific Competitions.",
     "project.threeBody":
-      "The Brazilian club with the highest number of awardees nationally and internationally.",
+      "A national reference in knowledge olympiads, preparing talents for the world's greatest intellectual challenges.",
     "project.threeTag1": "Education",
-    "project.threeTag2": "Recognition",
-    "project.threeTag3": "Impact",
+    "project.threeTag2": "Olympiads",
+    "project.threeTag3": "Award-winning",
     "project.threeCta": "Visit amplexoedu.com",
     "timeline.label": "Focus timeline",
     "timeline.heading": "A narrative that connects teaching, innovation, and impact.",
@@ -182,6 +171,9 @@ const translations = {
     "contact.body":
       "If you want collaboration, talks, workshops, pedagogical consulting, or partnerships in technology and education, find me on the channels below.",
     "contact.whatsapp": "Direct WhatsApp",
+    "footer.tagline": "Technology, education, and purpose.",
+    "footer.rights": "All rights reserved.",
+    "footer.builtWith": "Built with passion & precision.",
     "lang.button": "PT",
   },
 };
