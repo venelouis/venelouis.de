@@ -715,14 +715,16 @@ canvas#starfield {
 
 .footer-grid {
   display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: 40px;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 32px;
 }
 
 .footer-brand {
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 16px;
   max-width: 400px;
 }
@@ -735,10 +737,10 @@ canvas#starfield {
 .footer-meta {
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
-  text-align: right;
+  align-items: center;
+  text-align: center;
   font-size: 0.85rem;
-  color: rgba(237, 245, 255, 0.4);
+  color: rgba(255, 255, 255, 0.4);
 }
 
 .footer-meta p {
@@ -747,11 +749,7 @@ canvas#starfield {
 
 @media (max-width: 768px) {
   .footer-grid {
-    flex-direction: column;
-    text-align: center;
-  }
-  .footer-meta {
-    text-align: center;
+    gap: 24px;
   }
 }
 
@@ -762,6 +760,9 @@ canvas#starfield {
 
 .reveal.is-visible {
   animation: rise 900ms ease both, floaty 9s ease-in-out infinite;
+  backface-visibility: hidden;
+  perspective: 1000px;
+  will-change: transform, opacity;
 }
 
 .hero-copy.reveal {
@@ -800,12 +801,10 @@ canvas#starfield {
   from {
     opacity: 0;
     transform: translateY(30px) scale(0.98);
-    filter: blur(8px);
   }
   to {
     opacity: 1;
     transform: translateY(0) scale(1);
-    filter: blur(0);
   }
 }
 
@@ -896,6 +895,13 @@ canvas#starfield {
   .timeline-item,
   .contact {
     padding: 24px;
+    backdrop-filter: blur(12px); /* Reduced blur for mobile performance */
+  }
+
+  .topbar {
+    flex-direction: column;
+    align-items: flex-start;
+    backdrop-filter: blur(12px); /* Reduced blur for mobile performance */
   }
 
   .data-chip-left,
