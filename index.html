@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Venelouis - professor de tecnologia, facilitador Google Arcade Brasil 2026 e criador de projetos educacionais em Bíblia, ciência e tecnologia."
+    />
+    <title>Venelouis | Tech Educator & Builder</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#inicio">Pular para o conteúdo</a>
+    <canvas id="starfield" aria-hidden="true"></canvas>
+
+    <div class="noise" aria-hidden="true"></div>
+    <div class="glow glow-a" aria-hidden="true"></div>
+    <div class="glow glow-b" aria-hidden="true"></div>
+
+    <main class="page-shell">
+      <header class="hero">
+        <nav class="topbar" aria-label="Navegação principal">
+          <a class="brand" href="#inicio">
+            <span class="brand-mark">V</span>
+            <span class="brand-text">Venelouis</span>
+          </a>
+
+          <div class="topbar-links">
+            <a href="#sobre" data-i18n="nav.about">Sobre</a>
+            <a href="#projetos" data-i18n="nav.projects">Projetos</a>
+            <a href="#contato" data-i18n="nav.contact">Contato</a>
+            <button class="lang-toggle" id="langToggle" type="button" aria-label="Alternar idioma">
+              EN
+            </button>
+          </div>
+        </nav>
+
+        <section class="hero-grid" id="inicio">
+          <div class="hero-copy reveal">
+            <p class="eyebrow" data-i18n="hero.eyebrow">Professor de tecnologia · Clube Amplexo Educação</p>
+            <h1>
+              <span data-i18n-html="hero.title">Tecnologia que <span>ensina</span>, conecta e transforma.</span>
+            </h1>
+            <p class="lede" data-i18n="hero.lede">
+              Eu sou Venelouis, educador, facilitador do Google Arcade Brasil 2026
+              e ex-aluno da Universidade Hebraica de Jerusalém. Meu trabalho une
+              fé, ciência, tecnologia e experiências de aprendizagem com impacto real.
+            </p>
+
+            <div class="hero-actions">
+              <a class="btn btn-primary" href="#projetos" data-i18n="hero.primaryCta">Ver projetos</a>
+              <a class="btn btn-secondary" href="#contato" data-i18n="hero.secondaryCta">Falar comigo</a>
+            </div>
+
+            <div class="pill-row" aria-label="Destaques rápidos">
+              <span class="pill" data-i18n="hero.pill1">ICO</span>
+              <span class="pill" data-i18n="hero.pill2">Matemática</span>
+              <span class="pill" data-i18n="hero.pill3">Bíblia</span>
+              <span class="pill" data-i18n="hero.pill4">Ciência</span>
+              <span class="pill" data-i18n="hero.pill5">Tecnologia</span>
+            </div>
+          </div>
+
+          <div class="hero-visual reveal">
+            <div class="portrait-card">
+              <div class="portrait-frame portrait-photo-frame">
+                <img src="assets/vene.png" alt="Foto de Venelouis" />
+                <div class="portrait-overlay" aria-hidden="true"></div>
+              </div>
+
+              <div class="data-chip data-chip-left">
+                <span data-i18n="hero.chipLeftLabel">Arcade Brasil 2026</span>
+                <strong data-i18n="hero.chipLeftValue">Facilitador</strong>
+              </div>
+              <div class="data-chip data-chip-right">
+                <span data-i18n="hero.chipRightLabel">Base acadêmica</span>
+                <strong data-i18n="hero.chipRightValue">Hebraica de Jerusalém</strong>
+              </div>
+
+              <div class="orbit orbit-one"></div>
+              <div class="orbit orbit-two"></div>
+            </div>
+          </div>
+        </section>
+      </header>
+
+      <section class="stats reveal" aria-label="Resumo rápido">
+        <article>
+          <strong>1</strong>
+          <span data-i18n="stats.one">professor com linguagem de futuro</span>
+        </article>
+        <article>
+          <strong>2</strong>
+          <span data-i18n="stats.two">plataformas educacionais em destaque</span>
+        </article>
+        <article>
+          <strong>3</strong>
+          <span data-i18n="stats.three">redes para acompanhar e colaborar</span>
+        </article>
+      </section>
+
+      <section class="content-grid">
+        <article class="panel about reveal" id="sobre">
+          <p class="section-label" data-i18n="about.label">Sobre mim</p>
+          <h2 data-i18n="about.heading">Ensino com propósito, arquitetura digital e experiência memorável.</h2>
+          <p data-i18n="about.paragraph1">
+            No Clube Amplexo Educação, ajudo estudantes a enxergarem a tecnologia como
+            ferramenta de criação, pensamento e serviço. Minha trajetória combina formação
+            internacional, mediação pedagógica e projetos que aproximam conhecimento bíblico,
+            ciência e tecnologia.
+          </p>
+          <p data-i18n="about.paragraph2">
+            A identidade visual deste site foi pensada para refletir essa mistura: precisão,
+            movimento, luz e uma sensação de laboratório vivo em constante evolução.
+          </p>
+        </article>
+
+        <aside class="panel stack reveal">
+          <p class="section-label" data-i18n="stack.label">Assinatura</p>
+          <div class="stack-list">
+            <div>
+              <span data-i18n="stack.roleLabel">Função</span>
+              <strong data-i18n="stack.roleValue">Professor de tecnologia</strong>
+            </div>
+            <div>
+              <span data-i18n="stack.orgLabel">Instituição</span>
+              <strong data-i18n="stack.orgValue">Clube Amplexo Educação</strong>
+            </div>
+            <div>
+              <span data-i18n="stack.programLabel">Programas</span>
+              <strong data-i18n="stack.programValue">Google Arcade Brasil 2026</strong>
+            </div>
+          </div>
+        </aside>
+      </section>
+
+      <section class="projects" id="projetos">
+        <div class="section-head reveal">
+          <p class="section-label" data-i18n="projects.label">Projetos em destaque</p>
+          <h2 data-i18n="projects.heading">Plataformas pensadas para aprender com profundidade e engajamento.</h2>
+        </div>
+
+        <div class="project-grid">
+          <article class="project-card reveal">
+            <div class="project-glow project-glow-a"></div>
+            <p class="project-kicker">creio.eu</p>
+            <h3 data-i18n="project.oneTitle">Plataforma gamificada para estudo da Bíblia, ciência e tecnologia.</h3>
+            <p data-i18n="project.oneBody">
+              Uma experiência de aprendizado com progressão, desafio, narrativa e
+              descoberta. Ideal para conectar espiritualidade, lógica, curiosidade científica
+              e prática tecnológica.
+            </p>
+            <div class="project-tags">
+              <span data-i18n="project.oneTag1">Gamificação</span>
+              <span data-i18n="project.oneTag2">Educação bíblica</span>
+              <span data-i18n="project.oneTag3">Ciência</span>
+            </div>
+            <a class="project-link" href="https://creio.eu" target="_blank" rel="noreferrer" data-i18n="project.oneCta">
+              Visitar creio.eu
+            </a>
+          </article>
+
+          <article class="project-card reveal">
+            <div class="project-glow project-glow-a"></div>
+            <p class="project-kicker">Clube Amplexo Educação</p>
+            <h3 data-i18n="project.threeTitle">Clube brasileiro com maior número de premiados nacional e internacionalmente.</h3>
+            <p data-i18n="project.threeBody">
+              O clube brasileiro com maior numero de premiados nacional e internacionalmente.
+            </p>
+            <div class="project-tags">
+              <span data-i18n="project.threeTag1">Educação</span>
+              <span data-i18n="project.threeTag2">Reconhecimento</span>
+              <span data-i18n="project.threeTag3">Impacto</span>
+            </div>
+            <a class="project-link" href="https://amplexoedu.com/" target="_blank" rel="noreferrer" data-i18n="project.threeCta">
+              Visitar amplexoedu.com
+            </a>
+          </article>
+
+          <article class="project-card reveal">
+            <div class="project-glow project-glow-b"></div>
+            <p class="project-kicker">biblia.creio.eu</p>
+            <h3 data-i18n="project.twoTitle">Estudo bíblico interlinear nos principais idiomas antigos.</h3>
+            <p data-i18n="project.twoBody">
+              Uma plataforma para explorar hebraico, aramaico, grego, latim, ge'ez,
+              síriaco e armênio com foco em contexto, estrutura e comparação textual.
+            </p>
+            <div class="project-tags">
+              <span data-i18n="project.twoTag1">Interlinear</span>
+              <span data-i18n="project.twoTag2">Idiomas antigos</span>
+              <span data-i18n="project.twoTag3">Pesquisa</span>
+            </div>
+            <a class="project-link" href="https://biblia.creio.eu" target="_blank" rel="noreferrer" data-i18n="project.twoCta">
+              Visitar biblia.creio.eu
+            </a>
+          </article>
+        </div>
+      </section>
+
+      <section class="timeline reveal">
+        <div class="section-head">
+          <p class="section-label" data-i18n="timeline.label">Linha de atuação</p>
+          <h2 data-i18n="timeline.heading">Uma narrativa que une ensino, inovação e impacto.</h2>
+        </div>
+
+        <div class="timeline-grid">
+          <div class="timeline-item">
+            <span data-i18n="timeline.oneLabel">Formação</span>
+            <strong data-i18n="timeline.oneTitle">Universidade Hebraica de Jerusalém</strong>
+            <p data-i18n="timeline.oneBody">Base acadêmica com amplitude cultural e intelectual.</p>
+          </div>
+          <div class="timeline-item">
+            <span data-i18n="timeline.twoLabel">Atualidade</span>
+            <strong data-i18n="timeline.twoTitle">Clube Amplexo Educação</strong>
+            <p data-i18n="timeline.twoBody">Docência e facilitação com foco em tecnologia e aprendizado vivo.</p>
+          </div>
+          <div class="timeline-item">
+            <span data-i18n="timeline.threeLabel">Horizonte</span>
+            <strong data-i18n="timeline.threeTitle">Google Arcade Brasil 2026</strong>
+            <p data-i18n="timeline.threeBody">Atuação como facilitador em um programa de mobilização e criação.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="contact reveal" id="contato">
+        <div>
+          <p class="section-label" data-i18n="contact.label">Contato</p>
+          <h2 data-i18n="contact.heading">Vamos construir algo extraordinário.</h2>
+          <p data-i18n="contact.body">
+            Se você quiser colaboração, palestras, oficinas, consultoria pedagógica ou
+            parceria em projetos de tecnologia e educação, me encontre nas redes abaixo.
+          </p>
+        </div>
+
+        <div class="socials">
+          <a
+            class="socials-cta"
+            href="https://wa.me/5585986794831"
+            target="_blank"
+            rel="noreferrer"
+            data-i18n="contact.whatsapp"
+          >
+            WhatsApp direto
+          </a>
+          <a href="https://instagram.com/venelouis" target="_blank" rel="noreferrer">Instagram @venelouis</a>
+          <a href="https://www.linkedin.com/in/venelouis" target="_blank" rel="noreferrer">LinkedIn /venelouis</a>
+          <a href="https://youtube.com/@venelouis" target="_blank" rel="noreferrer">YouTube @venelouis</a>
+          <a href="https://github.com/venelouis" target="_blank" rel="noreferrer">GitHub @venelouis</a>
+          <a href="https://x.com/venelouis" target="_blank" rel="noreferrer">X @venelouis</a>
+        </div>
+      </section>
+    </main>
+
+    <script src="main.js"></script>
+  </body>
+</html>
