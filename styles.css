@@ -403,16 +403,20 @@ canvas#starfield {
   object-position: center 18%;
   transform: scale(1.04);
   filter: saturate(1.06) contrast(1.04);
-  animation: glitch-skew 4s infinite step-end;
+  animation: glitch-skew 2s infinite linear alternate-reverse;
 }
 
 @keyframes glitch-skew {
   0% { transform: scale(1.04) skew(0deg); }
-  2% { transform: scale(1.1) skew(5deg) translateX(2px); filter: contrast(1.5) brightness(1.2); }
-  4% { transform: scale(1.04) skew(0deg); filter: none; }
-  60% { transform: scale(1.04) skew(0deg); }
-  62% { transform: scale(1.1) skew(-10deg) translateY(-2px); filter: saturate(3); }
-  64% { transform: scale(1.04) skew(0deg); filter: none; }
+  10% { transform: scale(1.04) skew(0deg); }
+  11% { transform: scale(1.1) skew(10deg) translateX(-5px); filter: hue-rotate(90deg) contrast(1.5); }
+  13% { transform: scale(1.04) skew(0deg); filter: none; }
+  45% { transform: scale(1.04) skew(0deg); }
+  47% { transform: scale(1.1) skew(-20deg) translateY(5px); filter: invert(0.1) saturate(5); }
+  49% { transform: scale(1.04) skew(0deg); filter: none; }
+  90% { transform: scale(1.04) skew(0deg); }
+  92% { transform: scale(1.2) translate(10px, -5px); clip-path: inset(10% 0 40% 0); }
+  94% { transform: scale(1.04) skew(0deg); clip-path: none; }
 }
 
 .portrait-overlay {
@@ -424,15 +428,16 @@ canvas#starfield {
     linear-gradient(180deg, rgba(2, 5, 11, 0.02) 0%, rgba(2, 5, 11, 0.25) 100%);
   mix-blend-mode: screen;
   pointer-events: none;
-  animation: glitch-color 5s infinite;
+  animation: glitch-color 3s infinite;
 }
 
 @keyframes glitch-color {
-  0%, 100% { opacity: 0.5; filter: hue-rotate(0deg); }
-  10% { opacity: 0.8; filter: hue-rotate(90deg); }
-  11% { opacity: 0.5; filter: hue-rotate(0deg); }
-  50% { opacity: 0.6; filter: hue-rotate(-45deg); }
-  51% { opacity: 0.5; filter: hue-rotate(0deg); }
+  0% { opacity: 0.5; filter: hue-rotate(0deg); }
+  5% { opacity: 0.9; filter: hue-rotate(180deg); }
+  10% { opacity: 0.5; filter: hue-rotate(0deg); }
+  40% { opacity: 0.5; }
+  42% { opacity: 0.8; filter: brightness(2); }
+  44% { opacity: 0.5; }
 }
 
 .data-chip {
@@ -463,15 +468,15 @@ canvas#starfield {
 }
 
 .data-chip-left {
-  top: 54px;
-  left: -20px;
-  transform: translateX(-15%);
+  top: 40px;
+  left: 20px;
+  transform: translateX(-40%);
 }
 
 .data-chip-right {
-  right: -20px;
-  bottom: 54px;
-  transform: translateX(15%);
+  right: 20px;
+  bottom: 40px;
+  transform: translateX(40%);
 }
 
 .orbit {
@@ -747,18 +752,21 @@ canvas#starfield {
   display: flex;
   flex-direction: column;
   gap: 16px;
-  max-width: 300px;
+  max-width: 400px;
 }
 
 .footer-brand p {
-  font-size: 0.9rem;
+  font-size: 0.95rem;
   color: var(--muted);
 }
 
 .footer-meta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
   text-align: right;
   font-size: 0.85rem;
-  color: rgba(237, 245, 255, 0.5);
+  color: rgba(237, 245, 255, 0.4);
 }
 
 .footer-meta p {
