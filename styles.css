@@ -403,6 +403,16 @@ canvas#starfield {
   object-position: center 18%;
   transform: scale(1.04);
   filter: saturate(1.06) contrast(1.04);
+  animation: glitch-skew 4s infinite step-end;
+}
+
+@keyframes glitch-skew {
+  0% { transform: scale(1.04) skew(0deg); }
+  2% { transform: scale(1.1) skew(5deg) translateX(2px); filter: contrast(1.5) brightness(1.2); }
+  4% { transform: scale(1.04) skew(0deg); filter: none; }
+  60% { transform: scale(1.04) skew(0deg); }
+  62% { transform: scale(1.1) skew(-10deg) translateY(-2px); filter: saturate(3); }
+  64% { transform: scale(1.04) skew(0deg); filter: none; }
 }
 
 .portrait-overlay {
@@ -414,6 +424,15 @@ canvas#starfield {
     linear-gradient(180deg, rgba(2, 5, 11, 0.02) 0%, rgba(2, 5, 11, 0.25) 100%);
   mix-blend-mode: screen;
   pointer-events: none;
+  animation: glitch-color 5s infinite;
+}
+
+@keyframes glitch-color {
+  0%, 100% { opacity: 0.5; filter: hue-rotate(0deg); }
+  10% { opacity: 0.8; filter: hue-rotate(90deg); }
+  11% { opacity: 0.5; filter: hue-rotate(0deg); }
+  50% { opacity: 0.6; filter: hue-rotate(-45deg); }
+  51% { opacity: 0.5; filter: hue-rotate(0deg); }
 }
 
 .data-chip {
@@ -445,14 +464,14 @@ canvas#starfield {
 
 .data-chip-left {
   top: 54px;
-  left: -4px;
-  transform: translateX(-30%);
+  left: -20px;
+  transform: translateX(-15%);
 }
 
 .data-chip-right {
-  right: -4px;
+  right: -20px;
   bottom: 54px;
-  transform: translateX(30%);
+  transform: translateX(15%);
 }
 
 .orbit {
@@ -712,22 +731,23 @@ canvas#starfield {
 }
 
 .footer {
-  margin-top: 64px;
-  padding: 48px 0;
+  margin-top: 80px;
+  padding: 60px 0 40px;
   border-top: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .footer-grid {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  gap: 32px;
+  align-items: flex-start;
+  gap: 40px;
 }
 
 .footer-brand {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 16px;
+  max-width: 300px;
 }
 
 .footer-brand p {

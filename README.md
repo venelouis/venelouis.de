@@ -5,7 +5,8 @@
 </p>
 
 <p align="center">
-  <strong>Tech Educator | Builder | Google Arcade Facilitator</strong>
+  <strong>Tech Educator | Builder | Google Arcade Facilitator</strong><br>
+  <em>Mentor de alunos para certificações AWS, Microsoft e outras.</em>
 </p>
 
 <p align="center">
@@ -18,11 +19,12 @@
 
 ## ✦ Visão Geral
 
-Este é o site pessoal de **Venelouis**, uma landing page de alto desempenho desenvolvida com uma estética *ultra-high-tech*. O foco central é a interseção entre educação, tecnologia e projetos autorais que transformam a experiência de aprendizado.
+Este é o site pessoal de **Venelouis**, uma landing page de alto desempenho desenvolvida com uma estética *ultra-high-tech*. O foco central é a interseção entre educação, tecnologia e mentorias estratégicas para certificações globais (AWS, Microsoft).
 
 ## ✦ Destaques do Projeto
 
-- 🚀 **Visual Cinematic**: Efeitos de partículas, brilhos neon e glassmorphism avançado.
+- 🚀 **Visual Cinematic**: Efeitos de partículas, brilhos neon, glassmorphism e animações de glitch digital.
+- 🎓 **Mentoria Especializada**: Foco em preparar alunos para certificações de nuvem e tecnologia.
 - 🌍 **Internacionalização**: Sistema bilingue completo (Português/Inglês).
 - 📱 **Ultra Responsivo**: Experiência fluida em qualquer dispositivo (Desktop, Tablet, Mobile).
 - ♿ **Acessibilidade**: Foco em padrões WCAG, suporte a redução de movimento e navegação por teclado.
