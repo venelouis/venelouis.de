@@ -9,6 +9,8 @@ const pointer = {
 const particles = [];
 const particleCount = Math.min(110, Math.max(64, Math.round(window.innerWidth / 14)));
 const langToggle = document.getElementById("langToggle");
+const menuToggle = document.getElementById("menuToggle");
+const navLinks = document.getElementById("navLinks");
 const root = document.documentElement;
 
 const translations = {
@@ -203,7 +205,7 @@ function applyLanguage(language) {
     }
   });
 
-  langToggle.textContent = copy["lang.button"];
+  langToggle.setAttribute("aria-checked", language === "en" ? "true" : "false");
   currentLanguage = language;
   localStorage.setItem("venelouis-language", language);
 }
@@ -275,6 +277,21 @@ updateMotionMode();
 
 langToggle.addEventListener("click", () => {
   applyLanguage(currentLanguage === "pt" ? "en" : "pt");
+});
+
+menuToggle.addEventListener("click", () => {
+  const isExpanded = menuToggle.getAttribute("aria-expanded") === "true";
+  menuToggle.setAttribute("aria-expanded", !isExpanded);
+  navLinks.classList.toggle("is-active");
+  document.body.style.overflow = !isExpanded ? "hidden" : "";
+});
+
+navLinks.querySelectorAll("a").forEach((link) => {
+  link.addEventListener("click", () => {
+    menuToggle.setAttribute("aria-expanded", "false");
+    navLinks.classList.remove("is-active");
+    document.body.style.overflow = "";
+  });
 });
 
 function draw() {

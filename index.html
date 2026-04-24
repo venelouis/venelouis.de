@@ -32,13 +32,24 @@
             <span class="brand-text">Venelouis</span>
           </a>
 
-          <div class="topbar-links">
+          <div class="topbar-actions">
+            <div class="lang-switch-wrapper">
+              <span class="flag-icon">🇧🇷</span>
+              <button class="lang-switch" id="langToggle" aria-label="Alternar idioma" role="switch" aria-checked="false">
+                <span class="lang-switch-thumb"></span>
+              </button>
+              <span class="flag-icon">🇺🇸</span>
+            </div>
+
+            <button class="menu-toggle" id="menuToggle" aria-label="Menu" aria-expanded="false">
+              <span class="hamburger"></span>
+            </button>
+          </div>
+
+          <div class="topbar-links" id="navLinks">
             <a href="#sobre" data-i18n="nav.about">Sobre</a>
             <a href="#projetos" data-i18n="nav.projects">Projetos</a>
             <a href="#contato" data-i18n="nav.contact">Contato</a>
-            <button class="lang-toggle" id="langToggle" type="button" aria-label="Alternar idioma">
-              EN
-            </button>
           </div>
         </nav>
 
