@@ -11,6 +11,7 @@ const particleCount = Math.min(110, Math.max(64, Math.round(window.innerWidth / 
 const langToggle = document.getElementById("langToggle");
 const menuToggle = document.getElementById("menuToggle");
 const navLinks = document.getElementById("navLinks");
+const navScrim = document.getElementById("navScrim");
 const root = document.documentElement;
 
 const translations = {
@@ -35,7 +36,7 @@ const translations = {
     "hero.chipLeftLabel": "Google Arcade Brasil 2026",
     "hero.chipLeftValue": "Facilitador",
     "hero.chipRightLabel": "Base acadêmica",
-    "hero.chipRightValue": "Hebraica de Jerusalém",
+    "hero.chipRightValue": "Universidade Hebraica de Jerusalém",
     "stats.one": "professor com linguagem de futuro",
     "stats.two": "plataformas educacionais em destaque",
     "stats.three": "redes para acompanhar e colaborar",
@@ -279,18 +280,31 @@ langToggle.addEventListener("click", () => {
   applyLanguage(currentLanguage === "pt" ? "en" : "pt");
 });
 
+function setMenuState(isOpen) {
+  menuToggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
+  navLinks.classList.toggle("is-active", isOpen);
+  document.body.classList.toggle("nav-open", isOpen);
+  document.body.style.overflow = isOpen ? "hidden" : "";
+}
+
 menuToggle.addEventListener("click", () => {
   const isExpanded = menuToggle.getAttribute("aria-expanded") === "true";
-  menuToggle.setAttribute("aria-expanded", !isExpanded);
-  navLinks.classList.toggle("is-active");
-  document.body.style.overflow = !isExpanded ? "hidden" : "";
+  setMenuState(!isExpanded);
+});
+
+navScrim?.addEventListener("click", () => {
+  setMenuState(false);
+});
+
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape") {
+    setMenuState(false);
+  }
 });
 
 navLinks.querySelectorAll("a").forEach((link) => {
   link.addEventListener("click", () => {
-    menuToggle.setAttribute("aria-expanded", "false");
-    navLinks.classList.remove("is-active");
-    document.body.style.overflow = "";
+    setMenuState(false);
   });
 });
 
@@ -344,6 +358,9 @@ function draw() {
 }
 
 window.addEventListener("resize", () => {
+  if (window.innerWidth > 980) {
+    setMenuState(false);
+  }
   resizeCanvas();
   initParticles();
 });
