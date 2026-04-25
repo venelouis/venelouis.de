@@ -19,6 +19,7 @@ const translations = {
     title: "Venelouis | Tech Educator & Builder",
     description:
       "Venelouis - professor de tecnologia, facilitador Google Arcade Brasil 2026 e criador de projetos educacionais em Bíblia, ciência e tecnologia.",
+    "nav.home": "Início",
     "nav.about": "Sobre",
     "nav.projects": "Projetos",
     "nav.contact": "Contato",
@@ -101,6 +102,7 @@ const translations = {
     title: "Venelouis | Tech Educator & Builder",
     description:
       "Venelouis - technology teacher, Google Arcade Brazil 2026 facilitator, and creator of educational projects in Bible, science, and technology.",
+    "nav.home": "Home",
     "nav.about": "About",
     "nav.projects": "Projects",
     "nav.contact": "Contact",
