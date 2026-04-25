@@ -266,14 +266,30 @@ window.addEventListener("mousemove", (event) => {
 });
 
 const reducedMotionQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
+const mobilePerformanceQuery = window.matchMedia("(max-width: 980px)");
+let animationFrameId = null;
+
+function shouldRenderEffects() {
+  return !reducedMotionQuery.matches && !mobilePerformanceQuery.matches;
+}
 
 function updateMotionMode() {
-  if (reducedMotionQuery.matches) {
+  if (!shouldRenderEffects()) {
+    if (animationFrameId !== null) {
+      cancelAnimationFrame(animationFrameId);
+      animationFrameId = null;
+    }
+    context.clearRect(0, 0, window.innerWidth, window.innerHeight);
     return;
+  }
+
+  if (animationFrameId === null) {
+    draw();
   }
 }
 
 reducedMotionQuery.addEventListener("change", updateMotionMode);
+mobilePerformanceQuery.addEventListener("change", updateMotionMode);
 updateMotionMode();
 
 langToggle.addEventListener("click", () => {
@@ -309,8 +325,9 @@ navLinks.querySelectorAll("a").forEach((link) => {
 });
 
 function draw() {
-  if (reducedMotionQuery.matches) {
+  if (!shouldRenderEffects()) {
     context.clearRect(0, 0, window.innerWidth, window.innerHeight);
+    animationFrameId = null;
     return;
   }
 
@@ -354,7 +371,7 @@ function draw() {
     }
   }
 
-  requestAnimationFrame(draw);
+  animationFrameId = requestAnimationFrame(draw);
 }
 
 window.addEventListener("resize", () => {
@@ -363,6 +380,7 @@ window.addEventListener("resize", () => {
   }
   resizeCanvas();
   initParticles();
+  updateMotionMode();
 });
 
 window.addEventListener("pointermove", (event) => {
@@ -377,4 +395,4 @@ window.addEventListener("pointerleave", () => {
 
 resizeCanvas();
 initParticles();
-draw();
+updateMotionMode();
